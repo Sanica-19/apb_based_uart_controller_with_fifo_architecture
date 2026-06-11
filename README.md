@@ -113,19 +113,6 @@ The RX FIFO temporarily stores received data until it is accessed by the process
 
 The top-level module integrates all functional blocks into a unified architecture. It coordinates communication between the APB interface, baud generator, UART transmitter, UART receiver, and FIFO buffers to enable complete end-to-end serial data transfer and functional verification.
 
- ## **Verification**
-
- The design was verified through dedicated testbenches for:
-
-APB Slave
-Baud Generator
-FIFO
-UART TX
-UART RX
-Top-Level Integration
-
-Waveforms were analyzed using GTKWave.
-
 ## Verification Summary
 
 The implemented design was functionally verified through simulation to ensure reliable communication across all integrated modules. The validation process included:
