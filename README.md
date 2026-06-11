@@ -52,5 +52,5 @@ CPU → APB Slave → TX FIFO → UART TX → TXD
 RXD → UART RX → RX FIFO → APB Slave → CPU
 
 **TX/RX Flowchart**
-![image alt]()
+![image alt](https://github.com/Sanica-19/apb_based_uart_controller_with_fifo_architecture/blob/94133b29b9d865a17e3979be076d6d4df1a9ad9f/Tx%20and%20Rx%20flowchart.jpeg)
 
