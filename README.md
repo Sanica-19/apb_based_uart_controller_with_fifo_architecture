@@ -38,8 +38,18 @@ The APB-Based UART Controller is composed of the following core modules:
 
 The architecture seamlessly integrates APB communication, UART transmission/reception, baud-rate generation, and FIFO buffering to ensure reliable and efficient serial data transfer.
 
-Block Diagram
+**Block Diagram**
 ![image alt](https://github.com/Sanica-19/apb_based_uart_controller_with_fifo_architecture/blob/aa712f7608571819b30f5305b59011fb2cb6a187/block%20diagram.jpeg)
+
+## Data Flow
+
+**Transmit Path:**
+
+CPU → APB Slave → TX FIFO → UART TX → TXD
+
+**Receive Path:**
+
+RXD → UART RX → RX FIFO → APB Slave → CPU
 
 
 
