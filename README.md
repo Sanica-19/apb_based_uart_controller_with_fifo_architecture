@@ -65,7 +65,8 @@ The APB Slave Interface serves as the communication bridge between the processor
 ### 2. Baud Rate Generator
 
 The Baud Rate Generator produces timing pulses required for UART communication by dividing the system clock to the configured baud rate.
-**Working**
+
+Working
 A clock divider divides the system clock according to:
 
 Baud Divisor = Clock Frequency / Baud Rate
@@ -96,9 +97,10 @@ The UART Receiver monitors incoming serial data, detects the start bit, samples 
 
 The TX FIFO acts as a temporary storage buffer for outgoing data before transmission. 
 
-FIFO Parameters
-Data Width = 8 bits
-Depth = 16 entries
+FIFO Configuration
+
+- Data Width: 8 bits
+- FIFO Depth: 16 entries
 ---
 
 ### 6. RX FIFO Buffer
