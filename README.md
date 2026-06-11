@@ -54,3 +54,61 @@ RXD → UART RX → RX FIFO → APB Slave → CPU
 **TX/RX Flowchart**
 ![image alt](https://github.com/Sanica-19/apb_based_uart_controller_with_fifo_architecture/blob/94133b29b9d865a17e3979be076d6d4df1a9ad9f/Tx%20and%20Rx%20flowchart.jpeg)
 
+## **Module Overview**
+
+### 1. APB Slave Interface
+
+The APB Slave Interface serves as the communication bridge between the processor and the UART subsystem. It manages APB read and write transactions, decodes addresses, generates the required control signals, and coordinates data movement between the processor and internal modules.
+
+---
+
+### 2. Baud Rate Generator
+
+The Baud Rate Generator produces timing pulses required for UART communication by dividing the system clock to the configured baud rate.
+**Working**
+A clock divider divides the system clock according to:
+
+Baud Divisor = Clock Frequency / Baud Rate
+
+Example:
+
+Clock Frequency = 50 MHz
+Baud Rate = 115200
+Divisor ≈ 434
+
+The baud generator produces one baud_tick every 434 clock cycles
+
+---
+
+### 3. UART Transmitter (TX)
+
+The UART Transmitter converts 8-bit parallel data into a serial bit stream following the UART communication protocol. It transmits the start bit, data bits, and stop bit in sequence while operating under the control of a finite state machine and baud-rate timing.
+
+---
+
+### 4. UART Receiver (RX)
+
+The UART Receiver monitors incoming serial data, detects the start bit, samples the incoming bits at the appropriate baud intervals, and reconstructs the original parallel data. The received data is then forwarded to the receive FIFO for further processing.
+
+---
+
+### 5. TX FIFO Buffer
+
+The TX FIFO acts as a temporary storage buffer for outgoing data before transmission. 
+
+FIFO Parameters
+Data Width = 8 bits
+Depth = 16 entries
+---
+
+### 6. RX FIFO Buffer
+
+The RX FIFO temporarily stores received data until it is accessed by the processor. This buffering mechanism improves communication reliability, prevents data loss, and supports efficient handling of continuous incoming data streams.
+
+---
+
+### 7. Top-Level Integration
+
+The top-level module integrates all functional blocks into a unified architecture. It coordinates communication between the APB interface, baud generator, UART transmitter, UART receiver, and FIFO buffers to enable complete end-to-end serial data transfer and functional verification.
+
+
