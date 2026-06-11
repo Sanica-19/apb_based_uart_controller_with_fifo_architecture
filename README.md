@@ -14,3 +14,29 @@ The complete design was developed as a major academic project and functionally v
 - Utilize FIFO architecture to improve throughput and minimize data loss.
 - Validate end-to-end functionality using simulation and waveform analysis.
 - Create a modular RTL design suitable for integration into modern FPGA and SoC platforms.
+
+  ## **Design Highlights**
+
+- APB-based communication interface
+- UART Transmitter and Receiver implementation
+- FIFO-based data buffering
+- Accurate baud-rate generation
+- Modular RTL design
+- Functional verification through simulation
+
+  ## **System Architecture**
+
+The APB-Based UART Controller is composed of the following core modules:
+
+- APB Slave Interface
+- Baud Rate Generator
+- UART Transmitter
+- UART Receiver
+- TX FIFO Buffer
+- RX FIFO Buffer
+- Top-Level Integration Module
+
+The architecture seamlessly integrates APB communication, UART transmission/reception, baud-rate generation, and FIFO buffering to ensure reliable and efficient serial data transfer.
+
+Block Diagram
+
