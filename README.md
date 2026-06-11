@@ -66,7 +66,7 @@ The APB Slave Interface serves as the communication bridge between the processor
 
 The Baud Rate Generator produces timing pulses required for UART communication by dividing the system clock to the configured baud rate.
 
-Working
+Working:
 A clock divider divides the system clock according to:
 
 Baud Divisor = Clock Frequency / Baud Rate
@@ -112,5 +112,77 @@ The RX FIFO temporarily stores received data until it is accessed by the process
 ### 7. Top-Level Integration
 
 The top-level module integrates all functional blocks into a unified architecture. It coordinates communication between the APB interface, baud generator, UART transmitter, UART receiver, and FIFO buffers to enable complete end-to-end serial data transfer and functional verification.
+
+ ## **Verification**
+
+ The design was verified through dedicated testbenches for:
+
+APB Slave
+Baud Generator
+FIFO
+UART TX
+UART RX
+Top-Level Integration
+
+Waveforms were analyzed using GTKWave.
+
+## Verification Summary
+
+The implemented design was functionally verified through simulation to ensure reliable communication across all integrated modules. The validation process included:
+
+* ✔ APB Read and Write Transactions
+* ✔ Baud Rate Generation
+* ✔ UART Data Transmission
+* ✔ UART Data Reception
+* ✔ TX/RX FIFO Operations
+* ✔ End-to-End System Integration
+* ✔ Waveform-Based Functional Analysis
+
+---
+
+## Potential Applications
+
+The proposed architecture can be utilized in a variety of embedded and communication systems, including:
+
+* Embedded SoC Platforms
+* FPGA-Based Designs
+* Industrial Automation Systems
+* Biomedical Monitoring Devices
+* Sensor Data Acquisition Systems
+* Low-Power Communication Interfaces
+* Serial Peripheral Communication Modules
+
+---
+
+## Development Environment
+
+| Tool           | Purpose                      |
+| -------------- | ---------------------------- |
+| Verilog HDL    | RTL Design                   |
+| ModelSim       | Functional Simulation        |
+| Icarus Verilog | RTL Compilation & Simulation |
+| GTKWave        | Waveform Analysis            |
+| Git            | Version Control              |
+| GitHub         | Source Code Management       |
+
+---
+
+## Future Enhancements
+
+* Configurable UART Parameters
+* Parity Error Detection
+* Interrupt-Driven Communication
+* Variable FIFO Depth
+* FPGA Hardware Implementation
+* UVM-Based Verification
+* Multi-UART Support
+* SoC-Level Integration
+
+---
+
+## Project Outcome
+
+This project provided practical exposure to RTL design, APB protocol implementation, UART communication, FIFO architecture, finite state machine design, and functional verification. It also strengthened understanding of modular hardware design and waveform-based debugging techniques.
+
 
 
