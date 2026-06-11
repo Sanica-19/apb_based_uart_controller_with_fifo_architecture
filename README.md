@@ -39,4 +39,4 @@ The APB-Based UART Controller is composed of the following core modules:
 The architecture seamlessly integrates APB communication, UART transmission/reception, baud-rate generation, and FIFO buffering to ensure reliable and efficient serial data transfer.
 
 Block Diagram
-![Block Diagram](docs/block_diagram.jpeg)
+![Block Diagram](C:\Users\sanic\OneDrive\Documents\block diagram.png.jpeg)
