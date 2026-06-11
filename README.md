@@ -51,5 +51,6 @@ CPU → APB Slave → TX FIFO → UART TX → TXD
 
 RXD → UART RX → RX FIFO → APB Slave → CPU
 
-
+**TX/RX Flowchart**
+![image alt]()
 
